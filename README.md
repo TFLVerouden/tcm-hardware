@@ -249,7 +249,7 @@ Currently only used to communicate with the syringe pump.
 ### Laser diffraction particle sizer
 *Malvern SprayTec*
 - [Website manufacturer](https://www.malvernpanalytical.com/en/products/product-range/spraytec)
-- [Manual](docs/peripherals/Malvern_SprayTec_manual.pdf)
+- [Manual](docs/peripherals/Malvern_SprayTec_manual.pdf) / [old, slightly different manual](docs/peripherals/Malvern_SprayTec_manual_old.pdf)
 - [Presentation before installation](docs/peripherals/Malvern_SprayTec_installation_slides.pdf)
 - [Brochure](docs/peripherals/Malvern_SprayTec_brochure.pdf)
 - [Troubleshooting: set trigger for dilute sprays](docs/peripherals/spraytec/SprayTec_support_set_trigger_dilute_spray.pdf)
