@@ -1,9 +1,3 @@
-*To do in this document:*
-- [ ] Check and add laser safety label/regulations here.
-- [ ] Add link to (micro)rheology repo(s) once applicable.
-- [ ] Add link to SprayTec lift (and other) class(es) once properly sorted.
-
-
 # Component list
 ## Airflow
 Connected by means of, among other components, Swagelok male connector fittings and tube adapters (see [catalogue & installation instructions](docs/airflow/Swagelok_fittings_ms-01-140_catalogue.pdf)). Advantage of connecting via these tubes is that the parts can be turned in any desired direction, rather than the angle being limited to keeping seals tight.
@@ -193,8 +187,7 @@ On breadboard left-to-right:
 - [Website manufacturer](https://www.thorlabs.com/thorproduct.cfm?partnumber=CPS635R)
 - [Datasheet](docs/piv_addon/Thorlabs_laser_CPS635R-specsheet.pdf)
 
-
-Mounted using a [Thorlabs MK11F/M laser diode mount](https://www.thorlabs.com/thorproduct.cfm?partnumber=MK11F/M)
+Class 3R laser (max 1.4 mW output at 636 nm). Mounted using a [Thorlabs MK11F/M laser diode mount](https://www.thorlabs.com/thorproduct.cfm?partnumber=MK11F/M)
 
 ### Photodiode
 *Thorlabs PDA36A2*
