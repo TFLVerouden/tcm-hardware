@@ -151,7 +151,24 @@ Used to control the solenoid valve.
 - [Website supplier](https://nl.rs-online.com/web/p/optocouplers/1610989?srsltid=AfmBOopHfB2N8esy3AUzJydobraa8phtpUnF_R_vVBQSlnlFK72Xo9mU)
 - [Data sheet](docs/electronics/Isocom_optocoupler_6N138_datasheet.pdf)
 
-The SprayTec and any other peripherals, like high-speed cameras, can be triggered with a 5 V signal that is pulled down to GND. The circuit uses an optocoupler to isolate the power supplies from "peripheral ground".
+The SprayTec and any other peripherals, like high-speed cameras, can be triggered with a 5 V signal that is pulled down to GND. The circuit uses an optocoupler to isolate the power supplies from "peripheral ground"[1].
+
+[ˆ1] Pretty sure we ended up grounding everything anyway.
+
+### Layer thickness measurement
+*Thorlabs LEDD1B LED driver*
+- [Website manufacturer](https://www.thorlabs.com/item/ledd1b)
+- [Manual](/docs/electronics/Thorlabs_LEDDriver_LEDD1B.pdf)
+
+The LED driver has two modes: 
+
+*Thorlabs MCWHLP1 LED lamp*
+- [Website manufacturer](https://www.thorlabs.com/item/MCWHL1)
+- [Manual](/docs/electronics/Thorlabs_LED_MCWHL1.pdf)
+
+*Ximea camera*
+- [Website manufacturer](https://www.ximea.com/products/usb-vision-industrial/xiq-usb3-compact-cmos-cameras/onsemi-python1300-usb3-mono-compact-camera)
+
 
 
 ## PIV add-on
@@ -203,7 +220,7 @@ Gain is set to 35 dB.
 - [Manual](docs/peripherals/Harvard_PHD2000_syringe_pump_manual.pdf)
 - [Recommended Python serial control code](https://github.com/WetenSchaap/pumpy3)
 
-The pump is connected using a custom RJ12 to DB9 cable, which consists of an [Assmann AT-S-26-6-6-S-7](docs/peripherals/pump_cable/Assmann_AT-S-26-6-6-S-7_RJ12_straight_through_cable.pdf) RJ12 straight-through cable[^1] and an [L-COM RBA096F](docs/peripherals/pump_cable/L-COM_RBA096F_adaptor_DB9F-RJ12.pdf) RJ12 to DB9 female adapter. They are connected as follows:
+The pump is connected using a custom RJ12 to DB9 cable, which consists of an [Assmann AT-S-26-6-6-S-7](docs/peripherals/pump_cable/Assmann_AT-S-26-6-6-S-7_RJ12_straight_through_cable.pdf) RJ12 straight-through cable[^2] and an [L-COM RBA096F](docs/peripherals/pump_cable/L-COM_RBA096F_adaptor_DB9F-RJ12.pdf) RJ12 to DB9 female adapter. They are connected as follows:
 
 | Pump pin | Cable conn. | Wire colour | Adapter conn. | Assignment |
 |----------|-------------|-------------|---------------|------------|
@@ -220,15 +237,15 @@ RS-232 IN port pin numbering on the pump (front view):
 RJ12 to DB9 adapter pin numbering (front views):
 ![RJ12 to DB9 adapter](docs/peripherals/pump_cable/L-COM_adapter_pinout.png)
 
-In the pump settings, make sure to set the correct syringe diameter. Commonly used Hamilton-Microliter Series Gastight syringes. Table also callable by cough machine control software in [syringe_sizes.csv](https://github.com/TFLVerouden/cough-machine-control/blob/main/source_python/tcm_control/devices/parameters/syringe_sizes.csv)[^2]:
+In the pump settings, make sure to set the correct syringe diameter. Commonly used Hamilton-Microliter Series Gastight syringes. Table also callable by cough machine control software in [syringe_sizes.csv](https://github.com/TFLVerouden/cough-machine-control/blob/main/source_python/tcm_control/devices/parameters/syringe_sizes.csv)[^3]:
 | Volume (mL) | Diameter (mm) |
 | ----------- | ------------- |
 | 1.0         | 4.61          |
 | 2.5         | 7.28          |
 | 5.0         | 10.3          |
 
-[^1]: "[A straight cord] is principally used for data, while reverse cords are for voice services. Straight cords feature an exactly duplicated arrangement of wires to pin connections on either side of the cable, while in reverse cables, the order of connections is mirrored i.e. in reverse order on the second side", from [RS-online](https://uk.rs-online.com/web/content/discovery/ideas-and-advice/telephone-cable-guide).
-[^2]: Adapted from page 50 [in the manual](docs/peripherals/Harvard_PHD2000_syringe_pump_manual.pdf): "Syringe Diameters in mm", section "Hamilton-Microliter Series Gastight".
+[^2]: "[A straight cord] is principally used for data, while reverse cords are for voice services. Straight cords feature an exactly duplicated arrangement of wires to pin connections on either side of the cable, while in reverse cables, the order of connections is mirrored i.e. in reverse order on the second side", from [RS-online](https://uk.rs-online.com/web/content/discovery/ideas-and-advice/telephone-cable-guide).
+[^3]: Adapted from page 50 [in the manual](docs/peripherals/Harvard_PHD2000_syringe_pump_manual.pdf): "Syringe Diameters in mm", section "Hamilton-Microliter Series Gastight".
 
 ### USB-RS232 hub
 *StarTech ICUSB2324I*
