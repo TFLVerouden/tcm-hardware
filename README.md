@@ -43,6 +43,7 @@ On breadboard left-to-right:
 *FESTO VUVS-LT25-M32C-MZD-G14-F8-1C1*
 - [Website manufacturer](https://www.festo.com/nl/nl/a/8035170/)
 - [Datasheet](docs/airflow/FESTO_valve1_VUVS-LT25-M32C-MZD-G14-F8-1C1%20datasheet.pdf)
+- [Catalogue/info](docs/airflow/FESTO_valve1_info.pdf)
 
 ### Valve #2 (proportional valve)
 *FESTO MPYE-5-1/4-420-B*
