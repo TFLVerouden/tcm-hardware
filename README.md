@@ -161,7 +161,7 @@ The SprayTec and any other peripherals, like high-speed cameras, can be triggere
 - [Website manufacturer](https://www.thorlabs.com/item/ledd1b)
 - [Manual](/docs/electronics/Thorlabs_LEDDriver_LEDD1B.pdf)
 
-The LED driver has two modes: 
+The LED driver is connected using a BNC cable (female end on driver body) and has two modes: trigger (turn on with positive signal) and modulation.  
 
 *Thorlabs MCWHLP1 LED lamp*
 - [Website manufacturer](https://www.thorlabs.com/item/MCWHL1)
@@ -267,7 +267,7 @@ Currently only used to communicate with the syringe pump.
 - [Troubleshooting: ambient light](docs/peripherals/spraytec/SprayTec_support_ambient_light.pdf)
 - [Troubleshooting: alarms at low signal](docs/peripherals/spraytec/SprayTec_support_alarm_at_low_signal.pdf)
     
-The SprayTec sits on top of a lift that can be controlled over serial.
+The SprayTec sits on top of a lift that can be controlled over serial. It is triggered via a proprietary port, but we have a cable to convert to BNC male. This is currently connector via a T-splitter such that we can also trigger a camera.
 
 ### Optics
 The distortion targets we use in our lab for calibrating high-speed video recordings are the [Thorlabs R2L2S3P3 (500 μm)](https://www.thorlabs.com/thorproduct.cfm?partnumber=R2L2S3P3) and [R2L2S3P4 (1 mm)](https://www.thorlabs.com/thorproduct.cfm?partnumber=R2L2S3P4) glass targets. They are positioned using the [B3C/M](https://www.thorlabs.com/thorproduct.cfm?partnumber=B3C/M) platform and [FFM1](https://www.thorlabs.com/thorproduct.cfm?partnumber=FFM1) holder. 
