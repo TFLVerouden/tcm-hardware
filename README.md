@@ -178,7 +178,7 @@ The LED driver is connected using a BNC cable (female end on driver body) and ha
 - [Website manufacturer](https://www.smcpneumatics.com/IR2000-F02.html)
 - [Manual](docs/piv_addon/SMC_pressureregulator_IR2000-F02_manual.pdf)
 
-Pressure at the output is read out by *FESTO SPAB-P10R-F-PB-L1*
+Pressure at the output can be read on the *FESTO SPAB-P10R-F-PB-L1* screen; it is currently only connected to the breadboard for power.
 - [Website manufacturer](https://www.festo.com/nl/nl/a/8035539/)
 - [Datasheet](docs/piv_addon/FESTO_pressuresensor_SPAB-P10R-F-PB-L1_datasheet.pdf)
 - [Manual](docs/piv_addon/FESTO_pressuresensor_SPAB-P10R-F-PB-L1_manual.pdf)
