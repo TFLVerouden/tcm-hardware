@@ -215,6 +215,10 @@ Class 3R laser (max 1.4 mW output at 636 nm). Mounted using a [Thorlabs MK11F/M 
 Gain is set to 35 dB.
 
 
+### Laser sheet optics
+*LAVision Sheet Optics 1108405*
+- [Manual](docs/piv_addon/LAVision_1003034_SheetOpticDivergent.pdf)
+
 ## Peripherals
 ### Syringe pump
 *Harvard Apparatus PHD 2000*
