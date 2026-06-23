@@ -156,17 +156,24 @@ The SprayTec and any other peripherals, like high-speed cameras, can be triggere
 
 [ˆ1] Pretty sure we ended up grounding everything anyway.
 
-### Layer thickness measurement
+## Layer thickness measurement
+### Light source
 *Thorlabs LEDD1B LED driver*
 - [Website manufacturer](https://www.thorlabs.com/item/ledd1b)
-- [Manual](/docs/electronics/Thorlabs_LEDDriver_LEDD1B.pdf)
+- [Manual](/docs/layer_thickness/Thorlabs_LEDDriver_LEDD1B.pdf)
 
 The LED driver is connected using a BNC cable (female end on driver body) and has two modes: trigger (turn on with positive signal) and modulation.  
 
 *Thorlabs MCWHLP1 LED lamp*
 - [Website manufacturer](https://www.thorlabs.com/item/MCWHL1)
-- [Manual](/docs/electronics/Thorlabs_LED_MCWHL1.pdf)
+- [Manual](/docs/layer_thickness/Thorlabs_LED_MCWHLP1.pdf)
 
+*Thorlabs FESH0450 edge pass filter*
+- [Website manufacturer](https://www.thorlabs.com/item/FESH0450)
+- [Transmission spectrum](/docs/layer_thickness/fesh0450_transmission.xlsx)
+- [Optical density spectrum](/docs/layer_thickness/fesh0450_od.xlsx)
+
+### Imaging
 *Ximea camera*
 - [Website manufacturer](https://www.ximea.com/products/usb-vision-industrial/xiq-usb3-compact-cmos-cameras/onsemi-python1300-usb3-mono-compact-camera)
 
