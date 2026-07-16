@@ -12,7 +12,7 @@ Connected by means of, among other components, Swagelok male connector fittings 
 - [Installation manual](docs/airflow/FESTO_pressureregulator_VPPE-3-1-18-10-420-E1_manual.pdf)
 - [Catalogue/info](docs/airflow/FESTO_pressureregulator_info.pdf)
 
-The pressure regulator has three parameter presets that range from slow (Pr1) to fast with overshoot (Pr3). Preset 2 seems to suit our needs. Note that any inputs below 4.16 mA are interpreted as 4.00 mA.
+The pressure regulator has three parameter presets that range from slow (Pr1) to fast with overshoot (Pr3). Preset 3 seems to suit our needs. Note that any inputs below 4.16 mA are interpreted as 4.00 mA.
 
 Connected using a *Pepperl+Fuchs V15-W-2M-PVC* female M12 to 5-way unterminated cable.
 - [Website manufacturer](https://nl.rs-online.com/web/p/sensor-actuator-cables/8919448)
@@ -133,6 +133,7 @@ The R-click 4-20 mA current receiver is used to read out the pressure on the tan
 | 806       | 4.04         |
 | 2191      | 10.98        |
 
+TODO: Explain use of EMA and choice of values here.
 
 ### MOSFET driver
 *Adafruit MOSFET driver*
