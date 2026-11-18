@@ -77,11 +77,36 @@ On breadboard left-to-right:
 
 Note: when making any physical changes to the current loop of R-click or T-click, reset the microcontroller because the current will be incorrect (~ 2 mA) otherwise.
 
+
 Breadboard top view:
 ![Cough machine control breadboard top view](pictures/breadboard_top_view.jpeg)
 
 Breadboard bottom view:
 ![Cough machine control breadboard bottom view](pictures/breadboard_bottom_view.jpeg)
+
+### R and T-click calibration values
+- Tank pressure regulator
+	- T-click
+		- low:   4.16 mA = bit 834
+		- high: 13.64 mA = bit 2729
+	- R-click (est. bitvals; vary a lot)
+		- low:   4.20 mA = bit 825
+		- high: 13.65 mA = bit 2707
+- Nebuliser pressure regulator
+	- T-click
+		- low:   4.17 mA = bit 834
+		- high: 13.65 mA = bit 2729
+	- R-click (est. bitvals; vary a lot)
+		- low:   4.20 mA = bit 848
+		- high: 13.64 mA = bit 2735
+- Proportional valve
+	- T-click
+		- low:  12.01 mA = 2402
+		- high: 20.02 mA = 4002
+		
+Conversion to pressure is done using [a calibration protocol](https://github.com/TFLVerouden/tcm-control/blob/main/src/tcm_control/calibration/pressure_calibration.py) (for the R-clicks) or a simple linear relation (for the T clicks, as in the pressure regulators, the set pressure range just corresponds to the 4-20 mA range):
+
+$$ p = a I + b = \left(\frac{10}{20 - 4}\right)I - 2.5 $$
 
 ### Power supplies
 *TracoPower TBLC-06-105* 5 V power supply unit (PSU)
@@ -111,11 +136,7 @@ The MCU handles communication between the PC and other components, as well as pr
 - [Data sheet Analog Devices ADuM1411 digital isolator](docs/electronics/MIKROE_4-20mA_T_click_ADuM1411_datasheet.pdf)
 - [Recommended control library](https://github.com/Dennis-van-Gils/MIKROE_4_20mA_RT_Click/tree/main)
 
-Two T-click 4-20 mA current regulators are used. One to control the proportional valve (12 mA to close, 20 mA to 100% open; 4-12 mA range is not used), and another to control the pressure regulator (4 mA for 0.1 bar up to, theoretically, 20 mA for 10 bar). The calibration values for both T-click boards are:
-| Bit value | Current (mA) |
-|-----------|--------------|
-| 796       | 3.97         |
-| 3982      | 19.90        |
+Two T-click 4-20 mA current regulators are used. One to control the proportional valve (12 mA to close, 20 mA to 100% open; 4-12 mA range is not used), and another to control the pressure regulator (4 mA for 0.1 bar up to, theoretically, 20 mA for 10 bar).
 
 
 *MIKROE 4-20 mA R-click* current receiver
@@ -127,11 +148,7 @@ Two T-click 4-20 mA current regulators are used. One to control the proportional
 - [Data sheet Texas Instruments TPS61041 boost converter](docs/electronics/MIKROE_4-20mA_R_click_TPS61041_datasheet.pdf)
 - [Recommended control library](https://github.com/Dennis-van-Gils/MIKROE_4_20mA_RT_Click/tree/main)
 
-The R-click 4-20 mA current receiver is used to read out the pressure on the tank. It is modified to act as passive current receiver (not supplying any voltage), see notes in the [MIKROE_4_20mA_RT_Click library](https://github.com/Dennis-van-Gils/MIKROE_4_20mA_RT_Click/tree/main/active_to_passive_R_click_modification). The calibration values are:
-| Bit value | Current (mA) |
-|-----------|--------------|
-| 806       | 4.04         |
-| 2191      | 10.98        |
+The R-click 4-20 mA current receiver is used to read out the pressure on the tank. It is modified to act as passive current receiver (not supplying any voltage), see notes in the [MIKROE_4_20mA_RT_Click library](https://github.com/Dennis-van-Gils/MIKROE_4_20mA_RT_Click/tree/main/active_to_passive_R_click_modification). 
 
 TODO: Explain use of EMA and choice of values here.
 
